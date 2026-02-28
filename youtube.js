@@ -9,8 +9,8 @@ function createCard(title,channelName,views,monthsOld,duration,thumbnailLink){
             <span class="duration">${duration}</span>
           </div>
           <div class="video-info">
-              <h3 class="title">${title}</h3>
-              <p class="metadata">${channelName}•${views}views•${monthsOld}months ago</p>
+              <h2 class="title">${title}</h2>
+              <p class="mdata">${channelName} • ${views} views • ${monthsOld} months ago</p>
           </div>
           <button class="menu-btn">⋮</button>
       </div>
@@ -24,3 +24,4 @@ createCard("Ekaki Chapter 2 : Arrival | Ashish Chanchlani","ashish chanchlani vi
 createCard("Ekaki Chapter 3 : Invasion | Ashish Chanchlani","ashish chanchlani vines","21M",2,"30:42","youtube/3.png");
 createCard("Ekaki Chapter 4 : Skyfall | Ashish Chanchlani","ashish chanchlani vines","22M",2,"37:19","youtube/4.png");
 createCard("Ekaki Chapter 5 : The Conqueror | Ashish Chanchlani","ashish chanchlani vines","15M",1,"1:08:18","youtube/5.png");
+
