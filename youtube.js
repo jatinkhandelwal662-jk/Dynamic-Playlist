@@ -1,61 +1,26 @@
-const videoData = [
-      {
-        id: 1,
-        title: "Ekaki Chapter 1 : Presence | Ashish Chanchlani | ACV Studios",
-        channel: "ashish chanchlani vines",
-        views: "41M views",
-        timePosted: "2 months ago",
-        duration: "36:37",
-        thumbnail: "youtube/1.png"
-      },
-      {
-        id: 2,
-        title: "Ekaki Chapter 2 : Arrival | Ashish Chanchlani | ACV Studios",
-        channel: "ashish chanchlani vines",
-        views: "29M views",
-        timePosted: "2 months ago",
-        duration: "44:37",
-        thumbnail: "youtube/2.png"
-      },
-      {
-        id: 3,
-        title: "Ekaki Chapter 3 : Invasion | Ashish Chanchlani | ACV Studios",
-        channel: "ashish chanchlani vines",
-        views: "21M views",
-        timePosted: "2 months ago",
-        duration: "30:42",
-        thumbnail: "youtube/3.png"
-      },
-      {
-        id: 4,
-        title: "Ekaki Chapter 4 : Skyfall | Ashish Chanchlani | ACV Studios",
-        channel: "ashish chanchlani vines",
-        views: "22M views",
-        timePosted: "1 month ago",
-        duration: "37:19",
-        thumbnail: "youtube/4.png"
-      }
-    ];
-function renderPlaylist(videos) {
-    const container=document.getElementById('playlist');
-    let htmlContent='';
-    videos.forEach(video=>{
-        htmlContent += `
-        <div class="video-card">
-        <div class="index">${video.id}</div>
-        <div class="thumbnail-container">
-            <img src="${video.thumbnail}" alt="Thumbnail">
-            <span class="duration">${video.duration}</span>
-        </div>
-        <div class="video-info">
-            <h3 class="title">${video.title}</h3>
-            <p class="metadata">${video.channel} • ${video.views} • ${video.timePosted}</p>
-        </div>
-        <button class="menu-btn">⋮</button>
-        </div>
-        `;
-    });
-    container.innerHTML=htmlContent;
-    }
+let n=1;
+function createCard(title,channelName,views,monthsOld,duration,thumbnailLink){
+  const container = document.querySelector('.container');
+  const card=`
+      <div class="video-card">
+        <div class="index">${n}</div>
+          <div class="thumbnail-container">
+            <img src="${thumbnailLink}">
+            <span class="duration">${duration}</span>
+          </div>
+          <div class="video-info">
+              <h3 class="title">${title}</h3>
+              <p class="metadata">${channelName}•${views}views•${monthsOld}months ago</p>
+          </div>
+          <button class="menu-btn">⋮</button>
+      </div>
+      `;
+  container.innerHTML+=card;
+  n++;
+}
 
-renderPlaylist(videoData);
+createCard("Ekaki Chapter 1 : Presence | Ashish Chanchlani","ashish chanchlani vines","41M",2,"36:37","youtube/1.png");
+createCard("Ekaki Chapter 2 : Arrival | Ashish Chanchlani","ashish chanchlani vines","29M",2,"44:37","youtube/2.png");
+createCard("Ekaki Chapter 3 : Invasion | Ashish Chanchlani","ashish chanchlani vines","21M",2,"30:42","youtube/3.png");
+createCard("Ekaki Chapter 4 : Skyfall | Ashish Chanchlani","ashish chanchlani vines","22M",2,"37:19","youtube/4.png");
+createCard("Ekaki Chapter 5 : The Conqueror | Ashish Chanchlani","ashish chanchlani vines","15M",1,"1:08:18","youtube/5.png");
