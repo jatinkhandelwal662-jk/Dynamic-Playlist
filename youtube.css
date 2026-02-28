@@ -91,7 +91,7 @@ body{
     cursor: pointer;
 }
 
-.playlist-container{
+.container{
     width: auto;
     max-width: 90rem;
     margin-top: 25px;
@@ -172,4 +172,5 @@ body{
     border:none;
     cursor:pointer;
     padding:0 8px;
+
 }
